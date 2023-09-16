@@ -5,9 +5,9 @@ import { TextField } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
-  height: 100vh; 
-  justify-content: center; 
-  align-items: center; 
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 `;
 
@@ -15,8 +15,8 @@ const FormContainer = styled.div`
   flex: 1;
   display: flex;
   text-align: left;
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const ImageContainer = styled.div`
@@ -35,15 +35,22 @@ const ImageContainer = styled.div`
 `;
 
 const StepContainer = styled.div`
-  width: 80%;
+  width: 70%;
   height: 100%;
   text-align: left;
-  padding: 20px;
+  padding: 3rem;
+  margin: 30px;
   margin-bottom: 20px;
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
+  width: 70%;
+  /* height: 100%; */
+  text-align: left;
+  padding: 3rem;
+  margin: 0 30px;
+  margin-bottom: 20px;
   justify-content: space-between;
   width: 100%;
 `;
@@ -57,8 +64,12 @@ const H1 = styled.h1`
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #313131;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -89,7 +100,7 @@ function Cadastro() {
   };
 
   const nextStep = () => {
-    if (step < 3) {
+    if (step < 3 && isFormDataValid()) {
       setStep(step + 1);
     }
   };
@@ -98,6 +109,16 @@ function Cadastro() {
     if (step > 1) {
       setStep(step - 1);
     }
+  };
+
+  const isFormDataValid = () => {
+    const { nome, email, whatsapp, estabelecimento, agreed } = formData;
+
+    if (!nome || !email || !whatsapp || !estabelecimento || !agreed) {
+      return false;
+    }
+
+    return true;
   };
 
   return (
