@@ -5,11 +5,9 @@ import { TextField } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
-  /* align-items: stretch; Para esticar o Container para ocupar a altura total */
-  /* padding: 20px; */
-  height: 100vh; /* Tornar o Container com altura total da viewport */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; 
+  justify-content: center; 
+  align-items: center; 
   height: 100vh;
 `;
 
@@ -17,13 +15,12 @@ const FormContainer = styled.div`
   flex: 1;
   display: flex;
   text-align: left;
-  flex-direction: column; /* Os inputs serão alinhados verticalmente */
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
+  flex-direction: column; 
+  justify-content: center; 
 `;
 
 const ImageContainer = styled.div`
-  flex: 1; /* Para o ImageContainer ocupar 50% da largura do Container */
+  flex: 1;
   display: flex;
   justify-content: center;
   background: linear-gradient(180deg, #313131 0%, rgba(196, 131, 30, 0) 100%);
@@ -41,7 +38,6 @@ const StepContainer = styled.div`
   width: 80%;
   height: 100%;
   text-align: left;
-  /* border: 1px solid #ccc; */
   padding: 20px;
   margin-bottom: 20px;
 `;
