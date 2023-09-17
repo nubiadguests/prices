@@ -58,29 +58,30 @@ function Cadastro() {
       }
     }
 
-    if (name === "senha" || name === "confirmaSenha") {
-      if (name === "senha") {
-        if (!value) {
-          setFieldErrors2({ ...fieldErrors2, senha: "Campo obrigatório" });
-        } else {
-          setFieldErrors2({ ...fieldErrors2, senha: "" });
-        }
+    if (name === "senha") {
+      if (value.length < 8) {
+        setFieldErrors2({
+          ...fieldErrors2,
+          senha: "A senha deve ter pelo menos 8 caracteres",
+        });
+      } else {
+        setFieldErrors2({ ...fieldErrors2, senha: "" });
       }
+    }
 
-      if (name === "confirmaSenha") {
-        if (!value) {
-          setFieldErrors2({
-            ...fieldErrors2,
-            confirmaSenha: "Campo obrigatório",
-          });
-        } else if (value !== formData.senha) {
-          setFieldErrors2({
-            ...fieldErrors2,
-            confirmaSenha: "As senhas não coincidem",
-          });
-        } else {
-          setFieldErrors2({ ...fieldErrors2, confirmaSenha: "" });
-        }
+    if (name === "confirmaSenha") {
+      if (!value) {
+        setFieldErrors2({
+          ...fieldErrors2,
+          confirmaSenha: "Campo obrigatório",
+        });
+      } else if (value !== formData.senha) {
+        setFieldErrors2({
+          ...fieldErrors2,
+          confirmaSenha: "As senhas não coincidem",
+        });
+      } else {
+        setFieldErrors2({ ...fieldErrors2, confirmaSenha: "" });
       }
     }
 
@@ -305,8 +306,6 @@ function Cadastro() {
           </div>
         </SpanContainer>
       </FormContainer>
-
-
     </Container>
   );
 }
