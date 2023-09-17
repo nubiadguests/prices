@@ -270,7 +270,7 @@ function Cadastro() {
             fullWidth
             margin="normal"
           />
-          <span style={{ color: "red" }}>
+          <span style={{ color: "red", marginTop: 30}}>
             Use mais de 8 caracteres combinando letras e números{" "}
           </span>
         </StepContainer>
