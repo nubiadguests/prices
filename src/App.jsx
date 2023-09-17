@@ -1,7 +1,7 @@
 
 import './App.css'
-import Cadastro from './Pages/Cadastro'
-import Planos from './Pages/Planos.jsx'
+import Cadastro from './Pages/Cadastro/Cadastro'
+
 import Navbar from './components/navbar'
 
 function App() {
