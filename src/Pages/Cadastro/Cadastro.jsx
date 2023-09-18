@@ -19,6 +19,7 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
+import ReactInputMask from "react-input-mask";
 
 function Cadastro() {
   const [step, setStep] = useState(1);
@@ -233,19 +234,25 @@ function Cadastro() {
             margin="normal"
           />
 
-          <TextField
-            type="text"
-            name="whatsapp"
-            label="WhatsApp"
-            variant="outlined"
+          <ReactInputMask
+            mask="(99) 99999-9999"
+            maskChar="_"
             value={formData.whatsapp}
             onChange={handleChange}
-            required
-            fullWidth
-            error={fieldErrors.whatsapp ? true : false}
-            helperText={fieldErrors.whatsapp}
-            margin="normal"
-          />
+          >
+            {() => (
+              <TextField
+                type="text"
+                name="whatsapp"
+                label="WhatsApp"
+                variant="outlined"
+                value={formData.whatsapp}
+                required
+                fullWidth
+                margin="normal"
+              />
+            )}
+          </ReactInputMask>
 
           <TextField
             type="text"
@@ -328,19 +335,17 @@ function Cadastro() {
               <img src={arrow} />
             </Button>
           )}
-
-         
         </ButtonContainer>
         <SpanContainer>
-            <CenteredDiv>
-              {step === 1 && (
-                <p>
-                  Já é cliente? Clique aqui para fazer{" "}
-                  <span style={{ color: "#C5831E" }}> Login </span>{" "}
-                </p>
-              )}
-            </CenteredDiv>
-          </SpanContainer>
+          <CenteredDiv>
+            {step === 1 && (
+              <p>
+                Já é cliente? Clique aqui para fazer{" "}
+                <span style={{ color: "#C5831E" }}> Login </span>{" "}
+              </p>
+            )}
+          </CenteredDiv>
+        </SpanContainer>
       </FormContainer>
     </Container>
   );
