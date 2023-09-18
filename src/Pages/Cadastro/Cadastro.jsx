@@ -170,7 +170,6 @@ function Cadastro() {
 
     const isValidStep1 = Object.keys(errors).length === 0;
     const isValidStep2 = Object.keys(errors2).length === 0;
-
     return step === 1 ? isValidStep1 : step === 2 ? isValidStep2 : true;
   };
 

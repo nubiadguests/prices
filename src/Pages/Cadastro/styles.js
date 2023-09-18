@@ -48,8 +48,10 @@ export const ImageContainer = styled.div`
 
   img {
     animation: ${fadeIn} 2s ease-in-out;
-    width: 1000px;
-    height: 1000px;
+    width: 160%;
+  height: 100vh;
+  object-fit: cover;
+
 
   @media (max-width: 500px) {
     order: 1;
