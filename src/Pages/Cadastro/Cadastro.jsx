@@ -37,7 +37,7 @@ function Cadastro() {
   const [fieldErrors2, setFieldErrors2] = useState({});
   const [imageSrc, setImageSrc] = useState(Barman);
   const [imageVisible, setImageVisible] = useState(true);
-  const [activeStep, setActiveStep] = useState(1);
+  const [activeStep] = useState(1);
 
   const [skipped, setSkipped] = useState(new Set());
 
