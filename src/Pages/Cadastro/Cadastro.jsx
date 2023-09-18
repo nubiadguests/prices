@@ -6,6 +6,7 @@ import arrow from "../../assets/arrow.svg";
 import {
   Button,
   ButtonContainer,
+  CenteredDiv,
   CheckBox,
   Container,
   FormContainer,
@@ -132,44 +133,44 @@ function Cadastro() {
   const isFormDataValid = () => {
     const { nome, email, whatsapp, estabelecimento, senha, confirmaSenha } =
       formData;
-  
+
     const errors = {};
     const errors2 = {};
-  
+
     if (!nome) {
       errors.nome = "Campo obrigatório";
     }
-  
+
     if (!email) {
       errors.email = "Campo obrigatório";
     }
-  
+
     if (!whatsapp) {
       errors.whatsapp = "Campo obrigatório";
     }
-  
+
     if (!estabelecimento) {
       errors.estabelecimento = "Campo obrigatório";
     }
-  
+
     if (!senha) {
       errors2.senha = "Campo obrigatório";
     } else if (senha.length < 8) {
       errors2.senha = "A senha deve ter pelo menos 8 caracteres";
     }
-  
+
     if (!confirmaSenha) {
       errors2.confirmaSenha = "Campo obrigatório";
     } else if (confirmaSenha !== senha) {
       errors2.confirmaSenha = "As senhas não coincidem";
     }
-  
+
     setFieldErrors(errors);
     setFieldErrors2(errors2);
-  
+
     const isValidStep1 = Object.keys(errors).length === 0;
     const isValidStep2 = Object.keys(errors2).length === 0;
-  
+
     return step === 1 ? isValidStep1 : step === 2 ? isValidStep2 : true;
   };
 
@@ -182,7 +183,7 @@ function Cadastro() {
       )}
 
       <FormContainer>
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: "100%", margin: "10px" }}>
           <Stepper activeStep={step - 1}>
             <Step>
               <StepLabel></StepLabel>
@@ -201,8 +202,7 @@ function Cadastro() {
               </Box>
             </Fragment>
           ) : (
-            <Fragment>
-            </Fragment>
+            <Fragment></Fragment>
           )}
         </Box>
         <StepContainer style={{ display: step === 1 ? "block" : "none" }}>
@@ -324,22 +324,24 @@ function Cadastro() {
         </StepContainer>
         <ButtonContainer>
           {step < 3 && (
-            <Button onClick={nextStep} >
+            <Button onClick={nextStep}>
               {step === 2 ? "Próxima" : "Vamos lá"}
               <img src={arrow} />
             </Button>
           )}
+
+         
         </ButtonContainer>
         <SpanContainer>
-          <div>
-            {step === 1 && (
-              <p>
-                Já é cliente? Clique aqui para fazer{" "}
-                <span style={{ color: "#C5831E" }}> Login </span>{" "}
-              </p>
-            )}
-          </div>
-        </SpanContainer>
+            <CenteredDiv>
+              {step === 1 && (
+                <p>
+                  Já é cliente? Clique aqui para fazer{" "}
+                  <span style={{ color: "#C5831E" }}> Login </span>{" "}
+                </p>
+              )}
+            </CenteredDiv>
+          </SpanContainer>
       </FormContainer>
     </Container>
   );

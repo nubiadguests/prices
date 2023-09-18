@@ -15,18 +15,22 @@ export const Container = styled.div`
   align-items: center;
   min-height: 100vh;
   flex-wrap: wrap;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const FormContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   padding: 20px;
-  max-width: 900px;
   margin: 0 auto;
 
-  @media (max-width: 950px) {
+  @media (max-width: 500px) {
     order: 2;
     text-align: center;
     align-items: center;
@@ -40,37 +44,32 @@ export const ImageContainer = styled.div`
   align-items: center;
   background: linear-gradient(180deg, #313131 0%, rgba(196, 131, 30, 0) 100%);
   mix-blend-mode: multiply;
-  z-index: -9999;
   overflow: hidden;
 
   img {
     animation: ${fadeIn} 2s ease-in-out;
-    width: 1000px; 
+    width: 1000px;
     height: 1000px;
 
-    @media (max-width: 950px) {
-      width: 900px; 
-      height: 900px;
-    }
-
-    @media (max-width: 335px) {
-      order: 1;
-      width: 100%;
-      height: auto; 
-    }
-  }
-
-  @media (max-width: 950px) {
+  @media (max-width: 500px) {
     order: 1;
+    width: 100%;
+    height: auto; 
   }
-  `
+
+  @media (max-width: 310px) {
+    order: 1;
+    width: 100vw;
+    height: auto; 
+  }
+}
+`;
 
 export const StepContainer = styled.div`
-  width: 70%;
+  width: 60%;
   text-align: left;
-  padding: 3rem;
-  margin: 30px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin: 0 auto;
 
   @media (max-width: 950px) {
     width: 100%;
@@ -80,16 +79,12 @@ export const StepContainer = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column; 
+  align-items: center;
   text-align: left;
-  padding-left: 3rem;
-  margin: 0 1.5rem;
-  margin-bottom: 20px;
+  margin: 20px 0;
   justify-content: space-between;
-  width: 100%;
+  width: 60%;
 
-  @media (min-width: 950px) {
-    flex-direction: row; 
-  }
 `;
 
 export const H1 = styled.h1`
@@ -102,10 +97,10 @@ export const H1 = styled.h1`
 
 export const Button = styled.button`
   display: flex;
-  padding: 10px 20px;
   justify-content: center;
+  height: 3rem;
+  width: 150px;
   align-items: center;
-  gap: 8px;
   background-color: #313131;
   color: #fff;
   border: none;
@@ -117,24 +112,34 @@ export const Button = styled.button`
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+
+  img{
+    margin: 10px;
+  }
 `;
 
 export const CheckBox = styled.input.attrs({ type: "checkbox" })`
-  margin-right: 3px;
-  margin-top: 5px;
+  margin: 10px 2px 0 10px;
 `;
 
 export const SpanContainer = styled.div`
-  display: flex;
+   display: flex;
   flex-direction: column; 
+  align-items: center;
   text-align: left;
-  padding-left: 3rem;
-  margin: 0 30px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   justify-content: space-between;
   width: 100%;
 
   @media (min-width: 950px) {
     flex-direction: row; 
   }
+`;
+
+
+export const CenteredDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
