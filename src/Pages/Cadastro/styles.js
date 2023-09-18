@@ -11,33 +11,56 @@ const fadeIn = keyframes`
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  flex-wrap: wrap;
 `;
 
 export const FormContainer = styled.div`
   flex: 1;
   display: flex;
-  text-align: left;
   flex-direction: column;
-  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  max-width: 900px; 
+  margin: 0 auto; 
+
+  @media (max-width: 950px) {
+    order: 2; 
+    text-align: center;
+    align-items: center;
+  }
 `;
+
+
+
+
 
 export const ImageContainer = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: linear-gradient(180deg, #313131 0%, rgba(196, 131, 30, 0) 100%);
   mix-blend-mode: multiply;
-  align-items: center;
   z-index: -9999;
+  overflow: hidden; 
 
   img {
     animation: ${fadeIn} 2s ease-in-out;
-    width: 800px;
-    height: 800px;
+    width: 900px; 
+    height: 900px;
+    @media (max-width: 950px) {
+   
+    height: 100%; 
+    width: 100%; 
+  }
+  }
+
+  @media (max-width: 950px) {
+    order: 1; 
+  
   }
 `;
 
@@ -103,3 +126,5 @@ export const SpanContainer = styled.div`
   justify-content: space-between;
   width: 100%;
 `;
+
+
