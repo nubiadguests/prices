@@ -75,6 +75,11 @@ export const StepContainer = styled.div`
 
   @media (max-width: 950px) {
     width: 100%;
+    padding: 10px; 
+  }
+  
+  @media (max-width: 600px) {
+    padding: 5px; 
   }
 `;
 
