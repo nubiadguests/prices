@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "../card";
 import productData from "../data/data";
 import {
@@ -32,6 +32,17 @@ function ProductList() {
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
+
+  useEffect(() => {
+    const savedSelectedProducts = JSON.parse(localStorage.getItem("selectedProducts")) || [];
+    setSelectedProducts(savedSelectedProducts);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));
+  }, [selectedProducts]);
+
+
 
   const totalDiscount = selectedProducts.reduce(
     (acc, product) => acc + (product.discount || 0),

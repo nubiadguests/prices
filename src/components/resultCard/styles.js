@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-// Define breakpoints for responsiveness
 const breakpoints = {
   small: "576px",
   medium: "768px",
@@ -8,7 +7,6 @@ const breakpoints = {
   xlarge: "1200px",
 };
 
-// Create a mixin for media queries
 const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
   accumulator[label] = (...args) => css`
     @media (min-width: ${breakpoints[label]}) {
@@ -19,10 +17,9 @@ const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
 }, {});
 
 export const ContainerMain = styled.div`
-  width: 100%; /* Full width by default */
-
+  width: 100%; 
   ${respondTo.medium`
-    width: 50%; /* 50% width on medium screens and above */
+    width: 50%; 
   `}
   height: 200px;
   margin: 0 auto;
@@ -47,20 +44,19 @@ export const ContainerMain = styled.div`
 `;
 
 export const ContainerCard = styled.div`
-  width: 100%; /* Full width by default */
+  width: 100%; 
 
   ${respondTo.medium`
-    width: 50%; /* 50% width on medium screens and above */
+    width: 
   `}
   margin: 0 auto;
   color: #313131;
 `;
 
 export const LineVertical = styled.hr`
-  width: 100%; /* Full width by default */
-
+  width: 100%; 
   ${respondTo.medium`
-    width: 50%; /* 50% width on medium screens and above */
+    width: 50%; 
   `}
   margin: 0 auto;
   height: 1px;
@@ -69,10 +65,10 @@ export const LineVertical = styled.hr`
 `;
 
 export const ResultContainer = styled.div`
-  width: 100%; /* Full width by default */
+  width: 100%; 
 
   ${respondTo.medium`
-    width: 50%; /* 50% width on medium screens and above */
+    width: 50%; 
   `}
   height: 100%;
   border-radius: 8px;
@@ -130,10 +126,10 @@ export const Discount = styled.p`
 `;
 
 export const TotalContainer = styled.div`
-  width: 100%; /* Full width by default */
+  width: 100%; 
 
   ${respondTo.medium`
-    width: 50%; /* 50% width on medium screens and above */
+    width: 50%; 
   `}
   height: 100px;
   border-radius: 8px;

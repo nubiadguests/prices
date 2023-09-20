@@ -145,3 +145,10 @@ export const CenteredDiv = styled.div`
   align-items: center;
   width: 100%;
 `;
+
+export const PaymentContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`

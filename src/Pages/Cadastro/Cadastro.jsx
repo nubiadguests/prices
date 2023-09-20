@@ -20,9 +20,10 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import ReactInputMask from "react-input-mask";
+import Payment from "../../components/PaymentForm";
 
 function Cadastro() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(3);
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -30,8 +31,8 @@ function Cadastro() {
     estabelecimento: "",
     senha: "",
     confirmaSenha: "",
-    pagamento: "",
   });
+
   const [agreed, setAgreed] = useState(false);
   const [fieldErrors, setFieldErrors] = useState({});
   const [fieldErrors2, setFieldErrors2] = useState({});
@@ -176,14 +177,14 @@ function Cadastro() {
 
   return (
     <Container>
-      {imageVisible && (
+      {step !== 3 && imageVisible && (
         <ImageContainer>
           <img src={imageSrc} alt="Barman" />
         </ImageContainer>
       )}
 
       <FormContainer>
-        <Box sx={{ width: "100%", margin: "10px" }}>
+        <Box sx={{ width: "50%", margin: "0 auto" }}>
           <Stepper activeStep={step - 1}>
             <Step>
               <StepLabel></StepLabel>
@@ -319,14 +320,8 @@ function Cadastro() {
           </span>
         </StepContainer>
         <StepContainer style={{ display: step === 3 ? "block" : "none" }}>
-          <h2>Etapa 3: Informações de Pagamento</h2>
-          <TextField
-            type="text"
-            name="pagamento"
-            placeholder="Informações de Pagamento"
-            value={formData.pagamento}
-            onChange={handleChange}
-          />
+       
+          <Payment />
         </StepContainer>
         <ButtonContainer>
           {step < 3 && (
