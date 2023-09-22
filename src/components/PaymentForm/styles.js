@@ -192,6 +192,6 @@ export const InputsContainer = styled.div`
 export const StyledTextField = styled(TextField)`
   width: 100%; 
   @media (max-width: 1900px) {
-    width: 50%;
+    width: 60%;
   }
 `;
