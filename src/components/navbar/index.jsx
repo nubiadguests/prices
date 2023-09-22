@@ -118,73 +118,73 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // return (
-  //   <NavbarContainer>
-  //     <img src={logo} />
+  return (
+    <NavbarContainer>
+      <img src={logo} />
       
-  //     <MobileMenuIcon onClick={toggleMobileMenu}>
-  //       &#9776;
-  //     </MobileMenuIcon>
+      <MobileMenuIcon onClick={toggleMobileMenu}>
+        &#9776;
+      </MobileMenuIcon>
       
-  //     <ButtonsContainer>
-  //       <Button
-  //         onClick={() => handleButtonClick("solucoes")}
-  //         isYellow={selectedButton === "solucoes"}
-  //       >
-  //         soluções
-  //       </Button>
-  //       <Button
-  //         onClick={() => handleButtonClick("planos")}
-  //         isYellow={selectedButton === "planos"}
-  //       >
-  //         planos
-  //       </Button>
-  //       <Button
-  //         onClick={() => handleButtonClick("blog")}
-  //         isYellow={selectedButton === "blog"}
-  //       >
-  //         blog
-  //       </Button>
-  //       <Button
-  //         onClick={() => handleButtonClick("contato")}
-  //         isYellow={selectedButton === "contato"}
-  //       >
-  //         contato
-  //       </Button>
+      <ButtonsContainer>
+        <Button
+          onClick={() => handleButtonClick("solucoes")}
+          isYellow={selectedButton === "solucoes"}
+        >
+          soluções
+        </Button>
+        <Button
+          onClick={() => handleButtonClick("planos")}
+          isYellow={selectedButton === "planos"}
+        >
+          planos
+        </Button>
+        <Button
+          onClick={() => handleButtonClick("blog")}
+          isYellow={selectedButton === "blog"}
+        >
+          blog
+        </Button>
+        <Button
+          onClick={() => handleButtonClick("contato")}
+          isYellow={selectedButton === "contato"}
+        >
+          contato
+        </Button>
 
-  //       <LoginButton> <img src={login} />Login</LoginButton>
-  //     </ButtonsContainer>
+        <LoginButton> <img src={login} />Login</LoginButton>
+      </ButtonsContainer>
       
-  //     <MobileMenu isOpen={isMobileMenuOpen}>
-  //       <Button
-  //         onClick={() => handleButtonClick("solucoes")}
-  //         isYellow={selectedButton === "solucoes"}
-  //       >
-  //         soluções
-  //       </Button>
-  //       <Button
-  //         onClick={() => handleButtonClick("planos")}
-  //         isYellow={selectedButton === "planos"}
-  //       >
-  //         planos
-  //       </Button>
-  //       <Button
-  //         onClick={() => handleButtonClick("blog")}
-  //         isYellow={selectedButton === "blog"}
-  //       >
-  //         blog
-  //       </Button>
-  //       <Button
-  //         onClick={() => handleButtonClick("contato")}
-  //         isYellow={selectedButton === "contato"}
-  //       >
-  //         contato
-  //       </Button>
-  //       <Button>Login</Button>
+      <MobileMenu isOpen={isMobileMenuOpen}>
+        <Button
+          onClick={() => handleButtonClick("solucoes")}
+          isYellow={selectedButton === "solucoes"}
+        >
+          soluções
+        </Button>
+        <Button
+          onClick={() => handleButtonClick("planos")}
+          isYellow={selectedButton === "planos"}
+        >
+          planos
+        </Button>
+        <Button
+          onClick={() => handleButtonClick("blog")}
+          isYellow={selectedButton === "blog"}
+        >
+          blog
+        </Button>
+        <Button
+          onClick={() => handleButtonClick("contato")}
+          isYellow={selectedButton === "contato"}
+        >
+          contato
+        </Button>
+        <Button>Login</Button>
 
-  //     </MobileMenu>
-  //   </NavbarContainer>
-  // );
+      </MobileMenu>
+    </NavbarContainer>
+  );
 }
 
 export default Navbar;

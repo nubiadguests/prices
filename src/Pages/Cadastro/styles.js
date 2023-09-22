@@ -27,13 +27,13 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* padding: 20px; */
   margin: 0 auto;
 
   @media (max-width: 500px) {
     order: 2;
     text-align: center;
     align-items: center;
+    padding: 20px; /* Adicione padding para espaçamento */
   }
 `;
 
@@ -49,50 +49,56 @@ export const ImageContainer = styled.div`
   img {
     animation: ${fadeIn} 2s ease-in-out;
     width: 160%;
-  height: 100vh;
-  object-fit: cover;
-
+    height: 100vh;
+    object-fit: cover;
+  }
 
   @media (max-width: 500px) {
     order: 1;
     width: 100%;
-    height: auto; 
+    height: auto;
+    padding: 20px; /* Adicione padding para espaçamento */
   }
 
   @media (max-width: 310px) {
     order: 1;
     width: 100vw;
-    height: auto; 
+    height: auto;
+    padding: 20px; /* Adicione padding para espaçamento */
   }
-}
-`;
+`
+
 
 export const StepContainer = styled.div`
   width: 60%;
   text-align: left;
-  /* padding: 20px; */
   margin: 0 auto;
 
   @media (max-width: 950px) {
     width: 100%;
-    padding: 10px; 
+    padding: 10px;
   }
-  
+
   @media (max-width: 600px) {
-    padding: 5px; 
+    padding: 5px;
   }
 `;
 
+
 export const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   text-align: left;
   margin: 20px 0;
   justify-content: space-between;
   width: 60%;
 
+  @media (max-width: 950px) {
+    width: 100%;
+  }
 `;
+
 
 export const H1 = styled.h1`
   font-family: Mulish;
@@ -130,8 +136,8 @@ export const CheckBox = styled.input.attrs({ type: "checkbox" })`
 `;
 
 export const SpanContainer = styled.div`
-   display: flex;
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: left;
   margin: 20px 0;
@@ -139,7 +145,7 @@ export const SpanContainer = styled.div`
   width: 100%;
 
   @media (min-width: 950px) {
-    flex-direction: row; 
+    flex-direction: row;
   }
 `;
 
@@ -156,4 +162,8 @@ export const PaymentContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+
+  @media (max-width: 500px) {
+    order: 3;
+  }
+`;

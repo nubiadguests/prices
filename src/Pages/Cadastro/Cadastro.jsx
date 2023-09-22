@@ -12,6 +12,7 @@ import {
   FormContainer,
   H1,
   ImageContainer,
+  PaymentContainer,
   SpanContainer,
   StepContainer,
 } from "./styles";
@@ -320,8 +321,10 @@ function Cadastro() {
           </span>
         </StepContainer>
         <StepContainer style={{ display: step === 3 ? "block" : "none" }}>
-       
+       <PaymentContainer>
+
           <Payment />
+       </PaymentContainer>
         </StepContainer>
         <ButtonContainer>
           {step < 3 && (

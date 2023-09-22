@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const MainContainer = styled.div`
   width: 100%;
   height: auto;
@@ -9,11 +10,6 @@ export const MainContainer = styled.div`
   @media (min-width: 769px) {
     flex-direction: row;
   }
-  @media (max-width: 601px) {
-  .responsive-text-field {
-    width: 50%;
-  }
-}
 `;
 
 export const PaymentContainer = styled.div`
@@ -27,6 +23,7 @@ export const PaymentContainer = styled.div`
     margin: 0;
   }
 `;
+
 
 export const StepContainer = styled.div`
   width: 100%;
@@ -166,7 +163,7 @@ export const FinalPrice = styled.p`
 
 export const Button = styled.button`
   display: flex;
-  width: 50%;
+  width: 100%; /* Altere para ocupar 100% da largura */
   padding: 16px 40px;
   justify-content: center;
   margin: 0 auto;
@@ -184,9 +181,20 @@ export const Button = styled.button`
   @media (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 
 export const InputsContainer = styled.div`
   width: 90%;
 
-`
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 54%;
+    justify-content: center;
+  }
+`;
