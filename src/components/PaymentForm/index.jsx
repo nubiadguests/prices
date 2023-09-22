@@ -37,14 +37,8 @@ import boletoIMG from "../../assets/cadastro/boleto.svg";
 import RowCard from "../rowCard";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-const useStyles = makeStyles((theme) => ({
-  responsiveTextField: {
-    width: "100%",
-  },
-}));
 
 function Payment() {
-  const classes = useStyles();
 
   const [formData, setFormData] = useState({
     nome: "",
@@ -122,7 +116,6 @@ function Payment() {
           <TextField
             type="text"
             name="nome"
-            margin="dense"
             placeholder="Nome"
             variant="outlined"
             label="Nome"
@@ -131,7 +124,6 @@ function Payment() {
           />
           <TextField
             type="text"
-            margin="dense"
             name="sobrenome"
             placeholder="Sobrenome"
             variant="outlined"
@@ -142,29 +134,24 @@ function Payment() {
           <TextField
             type="text"
             name="endereco"
-            fullWidth
-            margin="normal"
             placeholder="endereço"
             variant="outlined"
             label="Endereço"
             value={formData.endereco}
             onChange={handleChange}
-            className={classes.responsiveTextField}
-                      />
+                       />
           <TextField
             type="text"
             name="estado"
             placeholder="Estado"
             variant="outlined"
             label="Estado"
-            margin="dense"
             value={formData.estado}
             onChange={handleChange}
           />
           <TextField
             type="text"
             name="cidade"
-            margin="dense"
             placeholder="Cidade"
             variant="outlined"
             label="Cidade"
@@ -175,7 +162,6 @@ function Payment() {
             type="text"
             name="cep"
             placeholder="cep"
-            margin="dense"
             variant="outlined"
             label="CEP"
             value={formData.cep}
@@ -187,7 +173,6 @@ function Payment() {
             placeholder="Telefone"
             variant="outlined"
             label="Telefone"
-            margin="dense"
             value={formData.telefone}
             onChange={handleChange}
           />
