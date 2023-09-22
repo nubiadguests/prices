@@ -184,7 +184,7 @@ export const Button = styled.button`
 `;
 
 export const InputsContainer = styled.div`
-  width: 90%;
+  width: 85%;
 
   @media (max-width: 800px) {
     width: 65%;
@@ -204,4 +204,13 @@ export const InputsContainer = styled.div`
     width: 54%;
     justify-content: center;
   }
+
+  /* @media (max-width: 1832px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 45%;
+    justify-content: center;
+  } */
 `;
