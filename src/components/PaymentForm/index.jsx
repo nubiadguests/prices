@@ -123,7 +123,6 @@ function Payment() {
             type="text"
             name="nome"
             margin="dense"
-            style={{ marginRight: "10px" }}
             placeholder="Nome"
             variant="outlined"
             label="Nome"
@@ -159,7 +158,6 @@ function Payment() {
             variant="outlined"
             label="Estado"
             margin="dense"
-            style={{ marginRight: "10px" }}
             value={formData.estado}
             onChange={handleChange}
           />
@@ -180,7 +178,6 @@ function Payment() {
             margin="dense"
             variant="outlined"
             label="CEP"
-            style={{ marginRight: "10px" }}
             value={formData.cep}
             onChange={handleChange}
           />

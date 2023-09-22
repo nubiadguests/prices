@@ -186,8 +186,14 @@ export const Button = styled.button`
 export const InputsContainer = styled.div`
   width: 90%;
 
-  @media (max-width: 768px) {
-    width: 90%;
+  @media (max-width: 800px) {
+    width: 65%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
   }
 
   @media (max-width: 500px) {
