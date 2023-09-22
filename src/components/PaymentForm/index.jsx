@@ -118,7 +118,7 @@ function Payment() {
             type="text"
             name="nome"
             margin="dense"
-            style={{marginRight: "10px"}}
+            style={{marginRight: "5px"}}
             placeholder="Nome"
             variant="outlined"
             label="Nome"
@@ -148,7 +148,7 @@ function Payment() {
           <StyledTextField
             type="text"
             name="estado"
-            style={{marginRight:"10 px"}}
+            style={{marginRight:"5px"}}
             margin="dense"
             placeholder="Estado"
             variant="outlined"
@@ -169,7 +169,7 @@ function Payment() {
           <StyledTextField
             type="text"
             name="cep"
-            style={{marginRight: "10px"}}
+            style={{marginRight: "5px"}}
             placeholder="cep"
             variant="outlined"
             margin="dense"
