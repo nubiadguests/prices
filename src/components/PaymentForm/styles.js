@@ -190,9 +190,8 @@ export const InputsContainer = styled.div`
 `;
 
 export const StyledTextField = styled(TextField)`
-  width: 100%; /* Define a largura como 100% por padrão */
-
+  width: 100%; 
   @media (max-width: 1900px) {
-    width: 65%; /* Reduz a largura para 50% em Full HD */
+    width: 50%;
   }
 `;
