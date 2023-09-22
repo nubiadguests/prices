@@ -24,6 +24,7 @@ import {
   ResultContainer,
   StepContainer,
   StyledTextField,
+  StyledTextFieldEnd,
   TextInfo,
   TotalContainer,
   TotalPrice,
@@ -113,7 +114,7 @@ function Payment() {
           <H2>dados pessoais</H2>
           <InputsContainer>
           
-          <TextField
+          <StyledTextField
             type="text"
             name="nome"
             placeholder="Nome"
@@ -122,7 +123,7 @@ function Payment() {
             value={formData.nome}
             onChange={handleChange}
           />
-          <TextField
+          <StyledTextField
             type="text"
             name="sobrenome"
             placeholder="Sobrenome"
@@ -131,7 +132,7 @@ function Payment() {
             value={formData.sobrenome}
             onChange={handleChange}
           />
-          <StyledTextField
+          <StyledTextFieldEnd
             type="text"
             name="endereco"
             placeholder="endereço"
@@ -141,7 +142,7 @@ function Payment() {
             value={formData.endereco}
             onChange={handleChange}
                        />
-          <TextField
+          <StyledTextField
             type="text"
             name="estado"
             placeholder="Estado"
@@ -150,7 +151,7 @@ function Payment() {
             value={formData.estado}
             onChange={handleChange}
           />
-          <TextField
+          <StyledTextField
             type="text"
             name="cidade"
             placeholder="Cidade"
@@ -159,7 +160,7 @@ function Payment() {
             value={formData.cidade}
             onChange={handleChange}
           />
-          <TextField
+          <StyledTextField
             type="text"
             name="cep"
             placeholder="cep"
@@ -168,7 +169,7 @@ function Payment() {
             value={formData.cep}
             onChange={handleChange}
           />
-          <TextField
+          <StyledTextField
             type="text"
             name="telefone"
             placeholder="Telefone"
