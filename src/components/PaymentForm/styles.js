@@ -205,12 +205,12 @@ export const InputsContainer = styled.div`
     justify-content: center;
   }
 
-  /* @media (max-width: 1832px) {
+  @media (max-width: 1832px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     width: 45%;
     justify-content: center;
-  } */
+  }
 `;
