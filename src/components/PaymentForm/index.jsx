@@ -117,6 +117,8 @@ function Payment() {
           <StyledTextField
             type="text"
             name="nome"
+            margin="dense"
+            style={{marginRight: "10px"}}
             placeholder="Nome"
             variant="outlined"
             label="Nome"
@@ -125,6 +127,7 @@ function Payment() {
           />
           <StyledTextField
             type="text"
+            margin="dense"
             name="sobrenome"
             placeholder="Sobrenome"
             variant="outlined"
@@ -137,7 +140,7 @@ function Payment() {
             name="endereco"
             placeholder="endereço"
             variant="outlined"
-            
+            margin="dense"
             label="Endereço"
             value={formData.endereco}
             onChange={handleChange}
@@ -145,6 +148,8 @@ function Payment() {
           <StyledTextField
             type="text"
             name="estado"
+            style={{marginRight:"10 px"}}
+            margin="dense"
             placeholder="Estado"
             variant="outlined"
             label="Estado"
@@ -154,6 +159,7 @@ function Payment() {
           <StyledTextField
             type="text"
             name="cidade"
+            margin="dense"
             placeholder="Cidade"
             variant="outlined"
             label="Cidade"
@@ -163,8 +169,10 @@ function Payment() {
           <StyledTextField
             type="text"
             name="cep"
+            style={{marginRight: "10px"}}
             placeholder="cep"
             variant="outlined"
+            margin="dense"
             label="CEP"
             value={formData.cep}
             onChange={handleChange}
@@ -173,6 +181,7 @@ function Payment() {
             type="text"
             name="telefone"
             placeholder="Telefone"
+            margin="dense"
             variant="outlined"
             label="Telefone"
             value={formData.telefone}
