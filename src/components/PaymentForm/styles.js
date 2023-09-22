@@ -187,13 +187,14 @@ export const InputsContainer = styled.div`
   width: 90%;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
   }
 
   @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     width: 54%;
     justify-content: center;
   }
