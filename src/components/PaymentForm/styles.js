@@ -83,8 +83,8 @@ export const LineHorizontal = styled.hr`
 export const ContainerBox = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: left;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   margin: 2rem 0;
 `;
@@ -103,13 +103,13 @@ export const ResultContainer = styled.div`
 
 export const Prices = styled.div`
   text-align: right;
-  /* padding: 20px; */
+  padding: 20px;
   align-self: flex-start;
   justify-content: flex-start;
 `;
 
 export const Infos = styled.div`
-  /* padding: 20px; */
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -144,7 +144,7 @@ export const Discount = styled.p`
 export const TotalContainer = styled.div`
   width: 100%;
 
-  /* height: 100px; */
+  height: 100px;
   border-radius: 8px;
   margin: auto;
   display: flex;
@@ -164,7 +164,7 @@ export const FinalPrice = styled.p`
 
 export const Button = styled.button`
   display: flex;
-  width: 100%; /* Altere para ocupar 100% da largura */
+  width: 100%; 
   padding: 16px 40px;
   justify-content: center;
   margin: 0 auto;

@@ -24,7 +24,7 @@ import ReactInputMask from "react-input-mask";
 import Payment from "../../components/PaymentForm";
 
 function Cadastro() {
-  const [step, setStep] = useState(3);
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -185,7 +185,7 @@ function Cadastro() {
       )}
 
       <FormContainer>
-        <Box sx={{ width: "50%", margin: "0 auto" }}>
+        <Box sx={{ width: "50%", margin: "0 auto", marginTop: "1rem" }}>
           <Stepper activeStep={step - 1}>
             <Step>
               <StepLabel></StepLabel>

@@ -189,7 +189,6 @@ function Payment() {
           />
           </InputsContainer>
         </div>
-        <ContainerBox >
         <div
             style={{
               border: "1px solid #C5831E",
@@ -271,7 +270,6 @@ function Payment() {
             </>
           )}
           </div>
-        </ContainerBox>
         <div
           style={{ display: "flex", flexDirection: "row", marginTop: "10px" }}
         >
