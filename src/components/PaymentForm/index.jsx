@@ -5,6 +5,8 @@ import {
   TextField,
   InputAdornment,
 } from "@mui/material";
+
+import {makeStyles} from "@mui/styles"
 import {
   Button,
   ContainerBox,
@@ -13,6 +15,7 @@ import {
   H2,
   H3,
   Infos,
+  InputsContainer,
   LineHorizontal,
   LineVertical,
   MainContainer,
@@ -34,7 +37,15 @@ import boletoIMG from "../../assets/cadastro/boleto.svg";
 import RowCard from "../rowCard";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
+const useStyles = makeStyles((theme) => ({
+  responsiveTextField: {
+    width: "100%",
+  },
+}));
+
 function Payment() {
+  const classes = useStyles();
+
   const [formData, setFormData] = useState({
     nome: "",
     sobrenome: "",
@@ -104,8 +115,10 @@ function Payment() {
   return (
     <MainContainer>
       <StepContainer>
-        <div style={{ padding: "15px" }}>
+        <div>
           <H2>dados pessoais</H2>
+          <InputsContainer>
+          
           <TextField
             type="text"
             name="nome"
@@ -137,8 +150,8 @@ function Payment() {
             label="Endereço"
             value={formData.endereco}
             onChange={handleChange}
-            className="responsive-text-field"
-          />
+            className={classes.responsiveTextField}
+                      />
           <TextField
             type="text"
             name="estado"
@@ -181,15 +194,19 @@ function Payment() {
             value={formData.telefone}
             onChange={handleChange}
           />
+          </InputsContainer>
         </div>
+        <ContainerBox >
         <div
-          style={{
-            border: "1px solid #C5831E",
-            backgroundColor: "#fafafa",
-            margin: " 2rem 0.5rem 0",
-            padding: "10px",
-          }}
-        >
+            style={{
+              border: "1px solid #C5831E",
+              backgroundColor: "#fafafa",
+              marginTop: "2rem",
+              width: "100%",
+              padding: "16px",
+            }}
+          >
+
           <FormControlLabel
             control={
               <Checkbox
@@ -260,7 +277,8 @@ function Payment() {
               </div>
             </>
           )}
-        </div>
+          </div>
+        </ContainerBox>
         <div
           style={{ display: "flex", flexDirection: "row", marginTop: "10px" }}
         >
@@ -311,28 +329,30 @@ function Payment() {
           }}
         >
           <H3>Outras formas de pagamento</H3>
+          <ContainerBox>
 
           <div
             style={{
+              width: "100%",
               border: "1px solid #ccc",
               backgroundColor: "#fafafa",
               marginTop: "2rem",
-              padding: "15px",
+              padding: "10px",
               display: "flex",
               alignItems: "center",
             }}
-          >
+            >
             <FormControlLabel
               control={
                 <Checkbox
-                  checked={paymentMethod === "pagamentoComPix"}
+                checked={paymentMethod === "pagamentoComPix"}
                   onChange={handlePaymentMethodChange}
                   name="pagamentoComPix"
                   style={{ display: "block" }}
                   icon={
                     <div
-                      style={{
-                        height: "16px",
+                    style={{
+                      height: "16px",
                         width: "16px",
                         borderRadius: "50%",
                         backgroundColor: "white",
@@ -342,13 +362,13 @@ function Payment() {
                   }
                   checkedIcon={
                     <div
-                      style={{
-                        width: "16px",
-                        height: "16px",
-                        borderRadius: "50%",
-                        backgroundColor: "#fff",
-                        border: "5px solid #C5831E",
-                      }}
+                    style={{
+                      width: "16px",
+                      height: "16px",
+                      borderRadius: "50%",
+                      backgroundColor: "#fff",
+                      border: "5px solid #C5831E",
+                    }}
                     />
                   }
                 />
@@ -371,8 +391,9 @@ function Payment() {
               style={{
                 margin: 10,
               }}
-            />
+              />
           </div>
+          </ContainerBox>
 
           <div
             style={{

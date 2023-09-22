@@ -27,7 +27,7 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
   margin: 0 auto;
 
   @media (max-width: 500px) {
@@ -70,7 +70,7 @@ export const ImageContainer = styled.div`
 export const StepContainer = styled.div`
   width: 60%;
   text-align: left;
-  padding: 20px;
+  /* padding: 20px; */
   margin: 0 auto;
 
   @media (max-width: 950px) {

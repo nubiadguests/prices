@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
 `;
 
 export const PaymentContainer = styled.div`
-  width: 50%;
+  width: 100%;
   text-align: left;
   margin-top: 1.4rem;
   margin-left: 1rem;
@@ -29,7 +29,7 @@ export const PaymentContainer = styled.div`
 `;
 
 export const StepContainer = styled.div`
-  width: 50%;
+  width: 100%;
   text-align: left;
 
   @media (max-width: 768px) {
@@ -47,7 +47,7 @@ export const H2 = styled.h2`
 `;
 
 export const P = styled.p`
-  color: var(--preto-preto-100, #313131);
+  color:  #313131;
   font-family: Mulish;
   font-size: 0.8em;
   font-style: normal;
@@ -85,7 +85,8 @@ export const LineHorizontal = styled.hr`
 export const ContainerBox = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  text-align: left;
   justify-content: center;
   margin: 2rem 0;
 `;
@@ -104,13 +105,13 @@ export const ResultContainer = styled.div`
 
 export const Prices = styled.div`
   text-align: right;
-  padding: 20px;
+  /* padding: 20px; */
   align-self: flex-start;
   justify-content: flex-start;
 `;
 
 export const Infos = styled.div`
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -183,4 +184,9 @@ export const Button = styled.button`
   @media (max-width: 768px) {
     width: 100%;
   }
+`
+
+export const InputsContainer = styled.div`
+  width: 90%;
+
 `
