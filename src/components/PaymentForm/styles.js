@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import styled from "styled-components";
 
 
@@ -186,23 +187,12 @@ export const Button = styled.button`
 export const InputsContainer = styled.div`
   width: 100%;
 
-  @media (max-width: 800px) {
-    width: 65%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: center;
-  }
+`;
 
-  @media (max-width: 500px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 54%;
-    justify-content: center;
-  }
+export const StyledTextField = styled(TextField)`
+  width: 100%; /* Define a largura como 100% por padrão */
 
+  @media (max-width: 1900px) {
+    width: 65%; /* Reduz a largura para 50% em Full HD */
+  }
 `;

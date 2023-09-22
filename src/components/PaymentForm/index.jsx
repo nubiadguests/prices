@@ -6,7 +6,6 @@ import {
   InputAdornment,
 } from "@mui/material";
 
-import {makeStyles} from "@mui/styles"
 import {
   Button,
   ContainerBox,
@@ -24,6 +23,7 @@ import {
   Prices,
   ResultContainer,
   StepContainer,
+  StyledTextField,
   TextInfo,
   TotalContainer,
   TotalPrice,
@@ -131,11 +131,12 @@ function Payment() {
             value={formData.sobrenome}
             onChange={handleChange}
           />
-          <TextField
+          <StyledTextField
             type="text"
             name="endereco"
             placeholder="endereço"
             variant="outlined"
+            
             label="Endereço"
             value={formData.endereco}
             onChange={handleChange}
